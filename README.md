@@ -1,6 +1,5 @@
 # La FUSTA
 
-## Projecte Intermodular
+## SMX2 - M12 - Projecte Intermodular
 
-Duplicat a gitlab i a github
-
+Duplicat a Gitlab i a GitHub.
