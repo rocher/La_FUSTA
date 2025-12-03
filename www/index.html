@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <title>Fusteria La FUSTA - Mobles a Mida (100% Analògics)</title>
+  <style>
+    /* Estètica deliberadament horrible, vella i antiquada */
+    body {
+      background: repeating-linear-gradient(45deg, #b8860b 0 10px, #ffd700 10px 20px);
+      font-family: 'Comic Sans MS', 'Arial';
+      color: #000080;
+      margin: 0;
+      padding: 0;
+    }
+    .container { width: 900px; margin: 20px auto; border: 8px solid #8b4513; background: #fff8dc; box-shadow: 0 0 0 6px #deb887; }
+    header { background: url('old-wood-bg.jpg') repeat; padding: 10px; border-bottom: 6px dashed #800000; }
+    h1 { font-size: 48px; color: #ff0000; text-shadow: 2px 2px #000; margin: 0; }
+    marquee { font-weight: bold; }
+
+    nav { background: #d3d3d3; padding: 6px; border-top: 4px solid #000; }
+    nav a { text-decoration: none; padding: 6px 10px; border: 2px solid #00008b; margin-right: 6px; background: #ffffe0; }
+
+    .leftcol { float: left; width: 45%; padding: 12px; }
+    .rightcol { float: right; width: 45%; padding: 12px; }
+
+    .photo-frame { border: 6px groove #654321; padding: 6px; background: #fffaf0; }
+    img.large { width: 100%; height: auto; display: block; }
+
+    table.catalog { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    table.catalog th { background: #800000; color: yellow; padding: 8px; border: 4px double #000; }
+    table.catalog td { padding: 8px; border: 3px solid #000080; background: #fafad2; }
+
+    footer { clear: both; padding: 12px; border-top: 4px dotted #000; background: #fff0f5; }
+
+    /* Blink effect (antiquat) */
+    .blink { animation: blink 1s steps(5, start) infinite; }
+    @keyframes blink { to { visibility: hidden; } }
+
+    /* Tiny awful marquee-ish box */
+    .badge { display: inline-block; padding: 6px; border: 3px ridge #228b22; background: #7fff00; font-weight: bold; }
+
+    /* Tiny responsive fix for small screens */
+    @media (max-width: 980px) { .container { width: 98%; } .leftcol, .rightcol { float: none; width: auto; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <center>
+        <h1><font color="#00ff00">Fusteria La FUSTA</font></h1>
+        <marquee behavior="scroll" direction="left">Des de 1923 - Mobles a mida, transport i muntatge - 100% analògics (SENSE CALCULADORA!!)</marquee>
+      </center>
+    </header>
+
+    <nav>
+      <a href="#qui">Qui Som</a>
+      <a href="#serveis">Serveis</a>
+      <a href="#contacte">Contacte</a>
+    </nav>
+
+    <section style="padding:12px;">
+      <div class="leftcol">
+        <h2 id="qui"><font color="#8b0000">Qui som</font></h2>
+        <div class="photo-frame">
+          <!-- Substituir per una foto real: "fusteria-vella.jpg" -->
+          <img class="large" src="fusteria-vella.jpg" alt="Fusteria antiga - La FUSTA">
+        </div>
+        <p><font face="Times New Roman">A la <b>Fusteria La FUSTA</b> fem mobles a mida des de fa tres generacions. Taller tradicional, eines de tota la vida i molt d'orgull artesanal. No fem servir ordinadors per dissenyar: tot al paper, a la vista i amb regle i llapis. Si voleu rapidesa digital, no som per a vosaltres.</font></p>
+        <p class="badge blink">100% ANALÒGICS</p>
+      </div>
+
+      <div class="rightcol">
+        <h2 id="serveis"><font color="#006400">Catàleg de Serveis</font></h2>
+
+        <table class="catalog">
+          <tr>
+            <th>Servei</th>
+            <th>Descripció</th>
+          </tr>
+          <tr>
+            <td><b>Mobles a mida</b></td>
+            <td>Armaris, taules, cadires i mobles per a cases que volen caràcter. Mesurem a mà, provem encaixos i fem acabats amb oli o vernís com abans.</td>
+          </tr>
+          <tr>
+            <td><b>Transport</b></td>
+            <td>Portem el moble al vostre domicili amb el nostre furgó (de vegades amb rascades). No fem embalatge modern: mantenim la tradició de la manta i la corda.</td>
+          </tr>
+          <tr>
+            <td><b>Muntatge</b></td>
+            <td>Muntatge a lloc per un mestre fuster. Clau, cargol i paciència. Si cal fer petits ajustos, els resolem amb l'escafa i la paperina.</td>
+          </tr>
+        </table>
+
+        <h3 style="margin-top:12px;"><font color="#8b008b">Horari</font></h3>
+        <p>Dl - Dv: 08:00 - 13:00 i 15:00 - 18:00<br>Ds: 09:00 - 13:00<br>Ds tarda i Dg: Tancat (per descans i arreglar eines)</p>
+
+        <h3 id="contacte"><font color="#00008b">Contacte</font></h3>
+        <p>Tlf: <b>93 555 00 00</b><br>Adreça: C/ Serra 12, Poble Fuster </p>
+
+      </div>
+    </section>
+
+    <footer>
+      <center>
+        <p><font size="+1">&copy; La FUSTA - Taller artesà des de 1923</font></p>
+      </center>
+    </footer>
+  </div>
+</body>
+</html>

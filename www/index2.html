@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <title>La FUSTA — Fusteria 4.0</title>
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Swiper.js (Slider modern) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <style>
+    body { background:#fff; color:#222; }
+    .hero { height: 80vh; }
+    .hero-title { font-size: 4rem; font-weight: 300; }
+    .service-card img { border-radius: 12px; }
+    footer { border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 fixed-top">
+  <div class="container">
+    <a class="navbar-brand fs-3" href="#">La FUSTA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#qui">Qui som</a></li>
+        <li class="nav-item"><a class="nav-link" href="#serveis">Serveis</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacte">Contacte</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SLIDER (Swiper) -->
+<div class="swiper hero">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide d-flex align-items-center justify-content-center text-white" style="background:url('foto-taller-modern.jpg') center/cover no-repeat">
+      <h1 class="hero-title" data-aos="fade-up">Fusteria 4.0</h1>
+    </div>
+    <div class="swiper-slide d-flex align-items-center justify-content-center text-white" style="background:url('robot-tall.jpg') center/cover no-repeat">
+      <h1 class="hero-title" data-aos="fade-up">Precisió Robòtica</h1>
+    </div>
+    <div class="swiper-slide d-flex align-items-center justify-content-center text-white" style="background:url('mobles-moderns.jpg') center/cover no-repeat">
+      <h1 class="hero-title" data-aos="fade-up">Disseny i Innovació</h1>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<!-- QUI SOM -->
+<section class="container py-5 mt-5" id="qui">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-8" data-aos="fade-up">
+      <h2 class="mb-4">Qui som</h2>
+      <p class="lead">La FUSTA és una fusteria d'última generació que combina l'artesania tradicional amb automatització 4.0, robots de tall d'alta precisió i disseny CAD/CAM. Innovació, sostenibilitat i qualitat defineixen el nostre procés.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVEIS -->
+<section class="container py-5" id="serveis">
+  <h2 class="text-center mb-5" data-aos="fade-up">Serveis</h2>
+  <div class="row g-4">
+
+    <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+      <div class="card service-card h-100 shadow-sm">
+        <img src="mobles-moderns.jpg" class="card-img-top" alt="Mobles a mida 4.0" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Mobles a mida intel·ligents</h5>
+          <p>Disseny digital i producció robotitzada.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card service-card h-100 shadow-sm">
+        <img src="robot-tall.jpg" class="card-img-top" alt="Tall robòtic" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Tall robòtic</h5>
+          <p>Precisió de micres i acabats perfectes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card service-card h-100 shadow-sm">
+        <img src="logistica.jpg" class="card-img-top" alt="Logística" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Logística integral</h5>
+          <p>Seguiment en temps real de comanda.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+      <div class="card service-card h-100 shadow-sm">
+        <img src="client-servei.jpg" class="card-img-top" alt="Servei al client" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Atenció al client 5★</h5>
+          <p>Visites virtuals i suport personalitzat.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTE -->
+<section class="container py-5" id="contacte">
+  <h2 class="text-center mb-4" data-aos="fade-up">Contacte</h2>
+  <div class="row justify-content-center">
+    <div class="col-lg-6" data-aos="fade-up">
+      <p class="text-center">Telèfon: <b>93 888 44 22</b></p>
+      <p class="text-center">Adreça: Av. Tecnologia 42, Parc Industrial</p>
+      <p class="text-center">Correu: info@lafusta.cat</p>
+    </div>
+  </div>
+</section>
+
+<footer class="py-4 text-center bg-light mt-5">
+  © 2025 La FUSTA — Fusteria 4.0
+</footer>
+
+<!-- JS: Bootstrap, Swiper, AOS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: { delay: 3500 },
+    pagination: { el: '.swiper-pagination', clickable: true },
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
+  });
+</script>
+
+</body>
+</html>
