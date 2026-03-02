@@ -6,7 +6,16 @@
 \origin unavailable
 \textclass scrbook
 \begin_preamble
-\newcommand{\LaFUSTA}{La{\textscript{U}}S{\textcaps{T}}{\textfoot{A}}}
+% Definició del logo La FUSTA tipus LaTeX
+\newcommand{\lf}{L\kern-.25em%
+        {\setbox0\hbox{A}\vbox to\ht0{\hbox{%
+        \check@mathfonts\fontsize\sf@size\z@\math@fontsfalse\selectfont A}%
+        \vss}}%
+        \kern-.10em F\kern-.10em%
+        \lower.5ex\hbox{U}\kern-.10em%
+        S\kern-.10em%
+        T\kern-.10em%
+        \hbox{\check@mathfonts\fontsize\sf@size\z@\math@fontsfalse\selectfont A}}
 \end_preamble
 \options bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading
 \use_default_options true
@@ -124,12 +133,20 @@ enumitem
 
 \begin_body
 
+\begin_layout Titlehead
+Institut de Palamós
+\end_layout
+
+\begin_layout Subject
+SMX2
+\end_layout
+
 \begin_layout Title
 La FUSTA
 \end_layout
 
 \begin_layout Subtitle
-Projecte Intermodular
+M12 Projecte Intermodular
 \end_layout
 
 \begin_layout Author
@@ -138,6 +155,86 @@ Francesc Rocher
 
 \begin_layout Date
 Curs 2025-2026
+\end_layout
+
+\begin_layout Publishers
+Edicions del Pingüí – 2026
+\end_layout
+
+\begin_layout Dedication
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+LARGE
+\end_layout
+
+\end_inset
+
+ Aquest és un projecte real.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+Large
+\end_layout
+
+\end_inset
+
+ Tots els fets que es relaten va passar a
+\begin_inset Newline newline
+\end_inset
+
+l'Eixample de Barcelona l'any 2024.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+large
+\end_layout
+
+\end_inset
+
+ Dedicat als meus pares,
+ que amb esforç
+\begin_inset Newline newline
+\end_inset
+
+i amor em van pagar els estudis i em van
+\begin_inset Newline newline
+\end_inset
+
+transmetre els valors de la feina ben feta.
 \end_layout
 
 \begin_layout Standard
@@ -153,10 +250,33 @@ Sumari
 
 \begin_layout Standard
 \noindent
-Aquest document conté la memòria tècnica del projecte La FUSTA,
+Aquest document conté la memòria tècnica del projecte 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Disseny inspirat en el de \SpecialChar LaTeX
+.
+\end_layout
+
+\end_inset
+
+,
  desenvolupat en el mòdul M12 Projecte Intermodular.
  El projecte analitza les necessitats d'una fusteria que és completament analógica i vol posar-se al dia tecnològicament.
- Es plantejen dues fases:
+ Es plantegen dues fases:
  implantació d'un sistema informàtic i adopció de tecnologies digitals per esdevenir una fusteria 4.0.
 \begin_inset Newline newline
 \end_inset
@@ -169,7 +289,11 @@ S'analitza el sistema des del punt de vista dels principals processos que cal in
  una implantació d'un sistema informàtic modern i una extensió del mateix amb tecnologies pròpies de la indústria 4.0,
  com ara robòtica col·laborativa,
  components IoT,
- block chain,
+ 
+\emph on
+blockchain
+\emph default
+,
  realitat augmentada i intel·ligència artificial.
 \end_layout
 
@@ -181,12 +305,43 @@ S'analitza el sistema des del punt de vista dels principals processos que cal in
 \end_layout
 
 \begin_layout Section*
+
+\lang english
 Abstract
 \end_layout
 
 \begin_layout Standard
 \noindent
-This document contains the technical report of the La FUSTA project,
+
+\lang english
+This document contains the technical report of the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+
+\backslash
+lf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Dessign inspired by \SpecialChar LaTeX
+.
+\end_layout
+
+\end_inset
+
+ project,
  developed in the M12 Intermodular Project module.
  The project analyzes the needs of a carpentry that is completely analog and wants to catch up technologically.
  Two phases are proposed:
@@ -202,7 +357,7 @@ The system is analyzed from the point of view of the main processes that need to
  an implementation of a modern IT system and an extension of it with technologies specific to Industry 4.0,
  such as collaborative robotics,
  IoT components,
- block chain,
+ blockchain,
  augmented reality and artificial intelligence.
 \end_layout
 
@@ -219,28 +374,12 @@ LatexCommand tableofcontents
 Introducció
 \end_layout
 
-\begin_layout Section
-Sobre La FUSTA 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-LaFUSTA
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Initial
 \begin_inset Argument 2
 status open
 
 \begin_layout Plain Layout
-L
+A
 \end_layout
 
 \end_inset
@@ -250,32 +389,67 @@ L
 status open
 
 \begin_layout Plain Layout
-es
+quest
 \end_layout
 
 \end_inset
 
- persones que treballen a la fusteria La FUSTA
+ capítol conté una descripció detallada de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lf
+\end_layout
+
+\end_inset
+
+,
+ els processos que du a terme en el seu dia a dia,
+ i una visió general dels casos d'ús més rellevants.
+ Posa en context el lector i descriu quin és l'abast del project.
+\end_layout
+
+\begin_layout Section
+Sobre La FUSTA
+\end_layout
+
+\begin_layout Standard
+Les persones que treballen a la fusteria 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lf
+\end_layout
+
+\end_inset
+
+
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-FUSTA és l'acrònim de
+FUSTA és l'acrònim de 
 \emph on
 Fusteria Única Sense Tecnologia Avançada
 \end_layout
 
 \end_inset
 
- encara porten el llàpis damunt de la orella i no usen ni calculadora.
+ encara porten el llapis damunt de la orella i no usen ni calculadora.
  Tot i ser un lloc en el que hi treballen una cinquantena de persones,
  el magatzem el gestionen amb Post-Its,
- les nòmies les fan amb fulls pautats i els ingressos al caixer,
- els dissenys i projectes els gestionen amb paper i llàpis i el magatzem el controlen a ull.
+ les nomines les fan amb fulls pautats i els ingressos al caixer,
+ els dissenys i projectes els gestionen amb paper i llapis i el magatzem el controlen a ull.
  Tenen un telèfon de disc,
  amb una centraleta,
  amb el que la persona de recepció passa les trucades a altres terminals.
- No tenen FAX ni internet,
+ No tenen FAX ni Internet,
  no usen xarxes socials i,
  òbviament,
  la pàgina web fa pena
@@ -315,7 +489,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename img-web.png
-	scale 50
+	width 100text%
 
 \end_inset
 
@@ -329,8 +503,7 @@ name "fig:Pàgina-web-de"
 
 \end_inset
 
-Pàgina web de La FUSTA,
- 
+Decebedora pàgina web 
 \begin_inset Flex URL
 status open
 
@@ -348,10 +521,6 @@ la-fusta.cat
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -360,7 +529,19 @@ la-fusta.cat
 \begin_layout Standard
 Afortunadament,
  això està a punt de canviar.
- La nova direcció de La FUSTA està molt conscienciada que l'adopció de noves tecnologies els portarà a millorar els processsos,
+ La nova direcció de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lf
+\end_layout
+
+\end_inset
+
+ està molt conscienciada que l'adopció de noves tecnologies els portarà a millorar els processos,
  a ser molt més eficients,
  a ser més sostenibles i a millorar encara més la qualitat dels seus serveis.
 \end_layout
@@ -369,27 +550,19 @@ Afortunadament,
 Antecedents
 \end_layout
 
-\begin_layout Initial
-\begin_inset Argument 2
+\begin_layout Standard
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-L
+
+\backslash
+lf
 \end_layout
 
 \end_inset
 
-
-\begin_inset Argument 3
-status open
-
-\begin_layout Plain Layout
-a
-\end_layout
-
-\end_inset
-
- FUSTA construeix mobles a mida i amb una fusta molt exclusiva per a empreses,
+ construeix mobles a mida i amb una fusta molt exclusiva per a empreses,
  hotels,
  restaurants,
  locals públics i clients particulars.
@@ -397,7 +570,7 @@ a
  especialment per adaptar les peces a l'espai,
  la llum i l'ambient de cada local.
  Són coneguts per haver fet biblioteques que deixen impacte en els lectors,
- amb estantaries còmodes,
+ amb estanteries còmodes,
  robustes i molt funcionals.
  També per haver fet projectes per a salons d'ajuntaments i restaurants de certa categoria.
 \end_layout
@@ -410,7 +583,15 @@ Tot i implementar processos de certa complexitat,
 \end_layout
 
 \begin_layout Standard
-El flux de treball típic quan un client contacta La FUSTA és el següent:
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+El flux de treball típic quan un client contacta amb ells és el següent:
 \end_layout
 
 \begin_layout Itemize
@@ -429,7 +610,36 @@ El dissenyador,
 \end_layout
 
 \begin_layout Itemize
-Es presenta l'avantprojecte
+Es presenta l'avantprojecte al client i es tanquen els detalls.
+\end_layout
+
+\begin_layout Itemize
+Si el client aprova l'avantprojecte i el pressupost,
+ llavors es tira endavant el project;
+ en cas contrari el projecte acaba en aquest punt.
+\end_layout
+
+\begin_layout Itemize
+Amb el disseny final del projecte es passa a la secció de tall de fusta per obtenir les peces necessàries.
+\end_layout
+
+\begin_layout Itemize
+El procés de tall de fusta és un punt crític:
+ les peces es tallen de taulers que fan 120x240cm de forma que generin el menor nombre de retalls possibles.
+ Hi tornarem sobre aquest punt més endavant.
+\end_layout
+
+\begin_layout Itemize
+Un cop tallades totes les peces es passa al muntatge del moble.
+\end_layout
+
+\begin_layout Itemize
+A la fase de muntatge també es fan els acabats necessaris.
+\end_layout
+
+\begin_layout Itemize
+Un cop està tot a punt,
+ el moble s'envia i es munta en el local del client.
 \end_layout
 
 \begin_layout Section
@@ -437,7 +647,7 @@ Inici del projecte
 \end_layout
 
 \begin_layout Standard
-La primera cosa que es vol fer amb La FUSTA és una anàlisi del sistema que necessiten.
+La primera cosa que es vol fer amb La FUSTA és una anàlisi del sistema que es necessita.
 \end_layout
 
 \begin_layout Chapter
