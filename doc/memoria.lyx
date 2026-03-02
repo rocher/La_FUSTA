@@ -4,28 +4,32 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass extbook
+\textclass scrbook
+\begin_preamble
+\newcommand{\LaFUSTA}{La{\textscript{U}}S{\textcaps{T}}{\textfoot{A}}}
+\end_preamble
+\options bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading
 \use_default_options true
 \begin_modules
 initials
 customHeadersFooters
 multicol
-paralist
 tabs-within-sections
 figs-within-sections
 fix-cm
 InStar
+enumitem
 \end_modules
 \maintain_unincluded_children no
 \language catalan
 \language_package default
 \inputencoding utf8
 \fontencoding auto
-\font_roman "cmr" "default"
-\font_sans "cmss" "default"
-\font_typewriter "cmtt" "default"
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
 \font_math "auto" "auto"
-\font_default_family rmdefault
+\font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_roman_osf false
@@ -36,7 +40,7 @@ InStar
 \use_microtype true
 \use_dash_ligatures false
 \graphics default
-\default_output_format default
+\default_output_format pdf2
 \output_sync 0
 \bibtex_command default
 \index_command default
@@ -56,6 +60,7 @@ InStar
 \pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue,pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
 \papersize a4
 \use_geometry false
 \use_package amsmath 1
@@ -82,7 +87,7 @@ InStar
 \use_lineno 0
 \backgroundcolor none
 \fontcolor none
-\notefontcolor lightgray
+\notefontcolor blue
 \boxbgcolor red
 \table_border_color default
 \table_odd_row_color default
@@ -96,7 +101,8 @@ InStar
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\is_math_indent 0
+\is_math_indent 1
+\math_indentation default
 \math_numbering_side default
 \quotes_style french
 \dynamic_quotes 0
@@ -122,6 +128,10 @@ InStar
 La FUSTA
 \end_layout
 
+\begin_layout Subtitle
+Projecte Intermodular
+\end_layout
+
 \begin_layout Author
 Francesc Rocher
 \end_layout
@@ -130,21 +140,15 @@ Francesc Rocher
 Curs 2025-2026
 \end_layout
 
-\begin_layout Section*
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-center{
-\backslash
-section*{Sumari}}
-\end_layout
-
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+Sumari
 \end_layout
 
 \begin_layout Standard
@@ -161,30 +165,23 @@ S'analitza el sistema des del punt de vista dels principals processos que cal in
  S'han escollit els casos d'ús més rellevants i que completen millor les necessitats del sistema pel que fa a hardware,
  xarxes,
  sistemes i aplicacions.
+ Es proposen dues solucions:
+ una implantació d'un sistema informàtic modern i una extensió del mateix amb tecnologies pròpies de la indústria 4.0,
+ com ara robòtica col·laborativa,
+ components IoT,
+ block chain,
+ realitat augmentada i intel·ligència artificial.
 \end_layout
 
-\begin_layout Section*
-\begin_inset VSpace 2cm*
+\begin_layout Standard
+\begin_inset VSpace 1.5cm*
 \end_inset
 
 
 \end_layout
 
 \begin_layout Section*
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-center{
-\backslash
-section*{Abstract}}
-\end_layout
-
-\end_inset
-
-
+Abstract
 \end_layout
 
 \begin_layout Standard
@@ -201,6 +198,12 @@ The system is analyzed from the point of view of the main processes that need to
  The most relevant use cases have been chosen and those that best complete the needs of the system in terms of hardware,
  networks,
  systems and applications.
+ Two solutions are proposed:
+ an implementation of a modern IT system and an extension of it with technologies specific to Industry 4.0,
+ such as collaborative robotics,
+ IoT components,
+ block chain,
+ augmented reality and artificial intelligence.
 \end_layout
 
 \begin_layout Standard
@@ -217,13 +220,44 @@ Introducció
 \end_layout
 
 \begin_layout Section
-Sobre La FUSTA
+Sobre La FUSTA 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+LaFUSTA
 \end_layout
 
-\begin_layout Standard
-A la fusteria La FUSTA
-\begin_inset Foot
+\end_inset
+
+
+\end_layout
+
+\begin_layout Initial
+\begin_inset Argument 2
 status open
+
+\begin_layout Plain Layout
+L
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+es
+\end_layout
+
+\end_inset
+
+ persones que treballen a la fusteria La FUSTA
+\begin_inset Foot
+status collapsed
 
 \begin_layout Plain Layout
 FUSTA és l'acrònim de
@@ -234,18 +268,19 @@ Fusteria Única Sense Tecnologia Avançada
 \end_inset
 
  encara porten el llàpis damunt de la orella i no usen ni calculadora.
- Tot i ser un lloc en els que hi treballen una cinquantena de persones,
+ Tot i ser un lloc en el que hi treballen una cinquantena de persones,
  el magatzem el gestionen amb Post-Its,
  les nòmies les fan amb fulls pautats i els ingressos al caixer,
- els dissenys i projectes els gestionen amb paper i llàpis,
- i el magatzem el controlen a ull.
- Tenen un telèfon amb una centraleta amb el que la persona de recepció passa les trucades a altres terminal.
+ els dissenys i projectes els gestionen amb paper i llàpis i el magatzem el controlen a ull.
+ Tenen un telèfon de disc,
+ amb una centraleta,
+ amb el que la persona de recepció passa les trucades a altres terminals.
  No tenen FAX ni internet,
  no usen xarxes socials i,
  òbviament,
  la pàgina web fa pena
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 La va fer el nebot de l'encarregat en un intent de convèncer al propietari de fer les coses per Internet.
@@ -279,8 +314,8 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-        filename img-web.png
-        scale 50
+	filename img-web.png
+	scale 50
 
 \end_inset
 
@@ -295,12 +330,12 @@ name "fig:Pàgina-web-de"
 \end_inset
 
 Pàgina web de La FUSTA,
-
+ 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
-https://la-fusta.cat
+la-fusta.cat
 \end_layout
 
 \end_inset
@@ -326,16 +361,91 @@ https://la-fusta.cat
 Afortunadament,
  això està a punt de canviar.
  La nova direcció de La FUSTA està molt conscienciada que l'adopció de noves tecnologies els portarà a millorar els processsos,
- ser molt més eficients,
+ a ser molt més eficients,
  a ser més sostenibles i a millorar encara més la qualitat dels seus serveis.
 \end_layout
 
 \begin_layout Section
-Sobre el projecte
+Antecedents
+\end_layout
+
+\begin_layout Initial
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+L
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 3
+status open
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+
+ FUSTA construeix mobles a mida i amb una fusta molt exclusiva per a empreses,
+ hotels,
+ restaurants,
+ locals públics i clients particulars.
+ Té molta fama per la complexitat dels seus projectes,
+ especialment per adaptar les peces a l'espai,
+ la llum i l'ambient de cada local.
+ Són coneguts per haver fet biblioteques que deixen impacte en els lectors,
+ amb estantaries còmodes,
+ robustes i molt funcionals.
+ També per haver fet projectes per a salons d'ajuntaments i restaurants de certa categoria.
+\end_layout
+
+\begin_layout Standard
+Tot i implementar processos de certa complexitat,
+ encara és l'hora que adoptin un nivell de digitalització superior a zero.
+ A nivell de mecanització tampoc estan massa avançats,
+ però són mestres de la fusta i sempre se'n surten.
+\end_layout
+
+\begin_layout Standard
+El flux de treball típic quan un client contacta La FUSTA és el següent:
+\end_layout
+
+\begin_layout Itemize
+Un dissenyador visita al client i el lloc on han d'anar els mobles.
+\end_layout
+
+\begin_layout Itemize
+El client explica les seves idees,
+ necessitats i desitjos.
+\end_layout
+
+\begin_layout Itemize
+El dissenyador,
+ amb la informació recollida del lloc i del client,
+ fa un avantprojecte.
+\end_layout
+
+\begin_layout Itemize
+Es presenta l'avantprojecte
+\end_layout
+
+\begin_layout Section
+Inici del projecte
 \end_layout
 
 \begin_layout Standard
 La primera cosa que es vol fer amb La FUSTA és una anàlisi del sistema que necessiten.
+\end_layout
+
+\begin_layout Chapter
+Projecte
+\end_layout
+
+\begin_layout Chapter
+Solució
 \end_layout
 
 \end_body
