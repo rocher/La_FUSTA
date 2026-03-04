@@ -16,6 +16,9 @@
         S\kern-.10em%
         T\kern-.10em%
         \hbox{\check@mathfonts\fontsize\sf@size\z@\math@fontsfalse\selectfont A}}
+
+%% l·l
+\DeclareUnicodeCharacter{00B7}{\ifmmode\cdot\else\leavevmode\kern-.25em\textperiodcentered\kern-.25em\fi}
 \end_preamble
 \options bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading
 \use_default_options true
@@ -33,7 +36,7 @@ enumitem
 \language catalan
 \language_package default
 \inputencoding utf8
-\fontencoding auto
+\fontencoding T1
 \font_roman "lmodern" "default"
 \font_sans "lmss" "default"
 \font_typewriter "lmtt" "default"
@@ -113,7 +116,7 @@ enumitem
 \is_math_indent 1
 \math_indentation default
 \math_numbering_side default
-\quotes_style french
+\quotes_style plain
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 2
@@ -320,8 +323,6 @@ status open
 
 \begin_layout Plain Layout
 
-\lang english
-
 \backslash
 lf
 \end_layout
@@ -431,12 +432,31 @@ lf
 
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 FUSTA és l'acrònim de 
+\series bold
 \emph on
-Fusteria Única Sense Tecnologia Avançada
+F
+\series default
+usteria 
+\series bold
+Ú
+\series default
+nica 
+\series bold
+S
+\series default
+ense 
+\series bold
+T
+\series default
+ecnologia 
+\series bold
+A
+\series default
+vançada
 \end_layout
 
 \end_inset
